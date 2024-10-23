@@ -12,7 +12,8 @@
         <input type="text" name="numero1" id="numero1"/>
         <lebel>Numero 02</lebel>
         <input type="text" name="numero2" id="numero2"/>
-        <button>Calcular com ajax</button>
+
+        <button onclick="Calculara();">Calculara com ajax</button>
         <p id="reultado"></p>
     </pre>
   <script>
@@ -22,7 +23,7 @@
          fetch( '/calculo.php',{
             method: 'POST',
             headers:{'Content-Type': 'application/json'},
-            body: JSON.stringfy({
+            body: JSON.stringify({
                 numero1: perseFloat(numero1),
                 numero1: perseFloat(numero2)
             })
